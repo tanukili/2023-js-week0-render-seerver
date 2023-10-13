@@ -4,6 +4,8 @@ const auth = require('json-server-auth');
 const apiServer = jsonServer.create();
 const apiRouter = jsonServer.router('mock/db.json');
 const middlewares = jsonServer.defaults();
+// 綁定
+apiServer.db = apiRouter.db;
 
 apiServer.use(middlewares);
 apiServer.use(auth);
