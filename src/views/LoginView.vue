@@ -20,7 +20,7 @@ export default {
           document.cookie = `userToken=${accessToken}; max-age=43200`;
           document.cookie = `userId=${id}; max-age=43200`;
           document.cookie = `role=${role}; max-age=43200`;
-          window.location.href = '/';
+          this.$router.push('/');
         })
         .catch((err) => {
           console.log(err.response);
