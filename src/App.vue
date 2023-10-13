@@ -22,6 +22,8 @@ export default {
       );
       if (role === 'admin') {
         this.isAdmin = true;
+      } else if (role) {
+        this.haveToken = true;
       } else {
         this.haveToken = false;
       }
