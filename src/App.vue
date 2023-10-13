@@ -22,6 +22,8 @@ export default {
       );
       if (role === 'admin') {
         this.isAdmin = true;
+      } else {
+        this.haveToken = false;
       }
     },
     // 移到父層，分別 prop 到子層
@@ -43,7 +45,6 @@ export default {
     },
   },
   mounted() {
-    console.log(import.meta.env.VITE_APP_PATH);
     this.checkRole();
   },
 };

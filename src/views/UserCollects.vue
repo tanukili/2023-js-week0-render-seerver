@@ -3,6 +3,7 @@ export default {
   data() {
     return {
       views: [],
+      userId: null,
     };
   },
   methods: {
@@ -18,7 +19,7 @@ export default {
         .delete(`${import.meta.env.VITE_APP_PATH}/collects/${id}`)
         .then(() => {
           alert('成功移除');
-          this.render();
+          this.render(this.userId);
         })
         .catch(() => {
           alert('移除失敗');
@@ -30,6 +31,7 @@ export default {
       /(?:(?:^|.*;\s*)userId\s*=\s*([^;]*).*$)|^.*$/,
       '$1'
     );
+    this.userId = userId;
     if (!userId) {
       // 未登入
       this.$router.push('/');
