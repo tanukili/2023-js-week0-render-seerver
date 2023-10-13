@@ -1,14 +1,20 @@
-import './assets/main.css'
+import './assets/main.css';
 
-import { createApp } from 'vue'
-import { createPinia } from 'pinia'
+import { createApp } from 'vue';
+import { createPinia } from 'pinia';
 
-import App from './App.vue'
-import router from './router'
+import 'bootstrap/dist/css/bootstrap.min.css'; // 載入 BS.css
+import 'bootstrap'; // 載入 BS.js
+import axios from 'axios';
+import VueAxios from 'vue-axios';
 
-const app = createApp(App)
+import App from './App.vue';
+import router from './router';
 
-app.use(createPinia())
-app.use(router)
+const app = createApp(App);
 
-app.mount('#app')
+app.use(createPinia());
+app.use(router);
+app.use(VueAxios, axios);
+
+app.mount('#app');
