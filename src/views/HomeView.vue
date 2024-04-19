@@ -17,6 +17,14 @@ export default {
   },
   mounted() {
     this.render();
+    this.axios
+      .get('https://two023-js-render-test-02.onrender.com/customerService')
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   },
 };
 </script>

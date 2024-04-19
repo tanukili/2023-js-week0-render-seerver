@@ -21,5 +21,4 @@ export default defineConfig({
       },
     },
   },
-  base: '/2023-js-week0-viewpoint/',
 });
