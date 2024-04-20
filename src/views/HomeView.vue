@@ -7,6 +7,7 @@ export default {
   },
   methods: {
     render() {
+      console.log(import.meta.env.VITE_APP_PATH);
       this.axios.get(`${import.meta.env.VITE_APP_PATH}/views`).then((res) => {
         this.views = res.data;
         this.views.forEach((e) => {
@@ -27,7 +28,7 @@ export default {
   },
   mounted() {
     this.render();
-    // this.test();
+    this.test();
   },
 };
 </script>

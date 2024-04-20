@@ -7,7 +7,8 @@
     "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
-    "deploy": "vite build && gh-pages -d dist"
+    "deploy": "vite build && gh-pages -d dist",
+    "mock": "cd mock & json-server-auth db.json --port 3000"
   },
   "dependencies": {
     "@popperjs/core": "^2.11.8",
@@ -23,11 +24,11 @@
     "vue-router": "^4.2.4"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^4.3.4",
+    "@vitejs/plugin-vue": "^5.0.3",
     "eslint": "^8.49.0",
     "eslint-plugin-vue": "^9.17.0",
     "gh-pages": "^6.1.1",
-    "vite": "^4.4.9"
+    "vite": "^5.0.11"
   },
   "engines": {
     "node": "^14.18.0 || >=16.0.0"
